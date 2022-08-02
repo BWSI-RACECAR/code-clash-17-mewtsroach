@@ -31,13 +31,13 @@ class Solution:
 
         # TODO: Write code below to return a nested list with the solution to the prompt
         return_lst = [[1]]
-        for i in range(1, rows + 1):
+        for i in range(2, rows + 2):
             temp_lst = [1]
             for j in range(1, i - 1):
                 temp_lst.append(return_lst[-1][j - 1] + return_lst[-1][j])
             temp_lst.append(1)
             return_lst.append(temp_lst)
-        return return_lst
+        return return_lst[:-1]
 
 def main():
     num = int(input())
